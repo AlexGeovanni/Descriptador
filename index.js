@@ -22,8 +22,9 @@ encriptar.addEventListener('click', ()=>{
         alertas.appendChild(p);
         alertas.classList.remove('ocultar')
         setTimeout(()=>{
+            alertas.innerHTML = ""
             alertas.classList.add('ocultar')
-        },2000)
+        },1000)
     }
 });
 
@@ -41,23 +42,26 @@ desencriptar.addEventListener('click', ()=>{
         alertas.appendChild(p);
         alertas.classList.remove('ocultar')
         setTimeout(()=>{
+            alertas.innerHTML = ""
             alertas.classList.add('ocultar')
-            alertas.innerHTML = "";
-        },2000)
+        },1000)
     }
 });
 
 //este evento click copia el texto resultado 
 copiaTexto.addEventListener('click',()=>{
-    navigator.clipboard.writeText(textoResultado.value)
+    navigator.clipboard.writeText(textoResultado.value);
+
     let p = document.createElement('p')
     p.innerHTML ="Usted a copiado el texto con exito"
     alertas.style.background="#0a6adf"
     alertas.appendChild(p);
     alertas.classList.remove('ocultar')
     setTimeout(()=>{
-        alertas.classList.add('ocultar')
-    },2000)
+        alertas.style.background="#36da36a4"
+        alertas.innerHTML = ""
+        alertas.classList.add('ocultar');
+    },1000)
 })
 
 // funcion muestra cuando hay resultado

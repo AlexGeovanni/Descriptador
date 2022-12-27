@@ -8,13 +8,17 @@
 main{
     background-color: #F3F5FC;
     padding: 10px 0;
+    height: 100vh;
 }
 .contenedor{
+    position: relative;
     width: 90%;
     margin: 0 auto;
+    height: 100vh;
 }
 .contenedor  h1{
-    font-size: 4rem
+    font-size: 4rem;
+    color: #0A3871;
 }
 .conte_texto .texto textarea,
 .conte_resultado textarea#resultado{
@@ -35,7 +39,7 @@ main{
     font-size: 1.5rem;
 }
 .conte_texto .bottones p{
-    font-size: .8rem;
+    font-size: 1rem;
     margin: 10px 0;
 }
 .conte_texto .bottones input,
@@ -52,6 +56,8 @@ main{
     border: 1px solid #0A3871;
     cursor: pointer;
 }
+
+
 .conte_texto .bottones input#desencrip,
 .conte_resultado input#copiar{
     color: #0A3871;
@@ -83,24 +89,13 @@ main{
     display: none;
 }
 
-input#copiar:hover
-{
-    background-color: #0A3871;
-    color: #ffffff;
-    transition: all .4s ease ;
-}
-input#encrip:hover{
-    background-color: transparent;
-    color: #0A3871;
-    transition: all .4s ease ;
-}
 
 .mensaje{
     background-color: #36da36a4;
-    top: 35%;
-    left: 25%;
-    right: 25%;
-    width: 80%;
+    position: absolute;
+    top: 20px;
+    left: 80px;
+    width: 50%;
     margin: 10px auto;
     border-radius: 18px;
     padding: 25px;
@@ -112,29 +107,63 @@ input#encrip:hover{
     font-weight: bold;
 }
 
+
+/* adaptado a mobil */
+
+@media screen and (max-width:699px) {
+    .conte_texto .bottones input,
+.conte_resultado input#copiar{
+    padding: 25px 0;
+}
+.contenedor .conte_vacio img{
+    display: none;
+}
+
+}
+
+
+
+/* adaptado a ipad */
+
 @media (min-width:700px) and (max-width:1200px) {
 
     .bottones div{
         display: flex;
         gap: 25px;
     }
+    .contenedor .conte_vacio img{
+        display: none;
+    }
 }
 
+/* adaptado a desktop */
 @media (min-width:1201px){
-    main{
-        height: 100vh;
-    }
     .contenedor{
         display: grid;
         grid-template-columns: repeat(3,1fr);
         gap: 10px;
     }
     .conte_texto{
-        grid-column: 1/3 ;
+        grid-column: 1/3 ;;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
     }
     .contenedor .conte_vacio{
         grid-column: 3/4;
-        padding: 50px 0px;
+        padding: 50px 30px;
+    }
+    .contenedor .conte_vacio div{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .conte_vacio img{
+        display: block;
+        margin-bottom: 55px;
+        width: 400px;
     }
     .contenedor .conte_resultado textarea{
         height: 500px;
@@ -147,7 +176,7 @@ input#encrip:hover{
         height: 100%;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: space-around;
     }
     .bottones div{
         display: flex;
