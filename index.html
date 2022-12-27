@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Estilo de css -->
+    <link rel="stylesheet" href="./style_index.css">
+
+    <!-- Font para las letras -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;1,500&display=swap"
+        rel="stylesheet">
+
+    <!-- titulo de nuestro proyecto -->
+    <title>Desencriptador</title>
+</head>
+
+<body>
+    <main>
+        <div class="mensaje ocultar" id="alerta">
+        </div>
+        <section class="contenedor">
+            
+            <div class="conte_texto">
+                <h1>a</h1>
+                <div class="texto">
+                        <textarea type="text" placeholder="Ingrese el texto aquí" id="textoIngresado" cols="30"
+                        rows="10"></textarea>
+                </div>
+                <div class="bottones">
+                    <p><img src="./img/Vector.svg" alt=""> Solo letras minúsculas y sin acento</p>
+                    <div>
+                        <input type="submit" value="Encriptar" id="encrip">
+                        <input type="submit" value="Desencriptar" id="desencrip">
+                    </div>
+                </div>
+            </div>
+            <div id="conte_resultado" class=" conte_resultado ocultar ">
+                <div>
+                    <textarea id="resultado" placeholder="" cols="30" rows="10" disabled></textarea>
+                    <input type="submit" value="Copiar" id="copiar">
+                </div>
+            </div>
+            <div id="conte_vacio" class="conte_vacio">
+                <h3>Ningún mensaje fue encontrado</h3>
+                <p>ingresa el texto que desees encriptar o desencriptar.</p>
+            </div>
+        </section>
+    </main>
+    <script src="./index.js"></script>
+</body>
+
+</html>
