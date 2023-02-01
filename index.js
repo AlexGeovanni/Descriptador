@@ -9,21 +9,25 @@ const encriptar = document.getElementById('encrip');
 const desencriptar = document.getElementById('desencrip');
 const copiaTexto = document.getElementById('copiar');
 
+let p = document.getElementById('text_alert')
+
 // este evento manda a llamar la funcion de encriptar
 encriptar.addEventListener('click', ()=>{
     let frase = encripta(encriptar.value);
+
     if(frase !==" "){
         view()
         textoResultado.value = frase
         textoIngresado.value = ""
     }else{
-        let p = document.createElement('p')
+        p.innerHTML = ""
         p.innerHTML ="Usted no ingreso ningún texto"
-        alertas.appendChild(p);
-        alertas.classList.remove('ocultar')
+        // alertas.appendChild(p);
+        alertas.style.background="#C70039"
+        alertas.classList.add('alert')
         setTimeout(()=>{
-            alertas.innerHTML = ""
-            alertas.classList.add('ocultar')
+            p.innerHTML = ""
+            alertas.classList.remove('alert')
         },1000)
     }
 });
@@ -37,13 +41,13 @@ desencriptar.addEventListener('click', ()=>{
         textoIngresado.value = ""
     }
     else{
-        let p = document.createElement('p');
+        alertas.innerHTML = "";
         p.innerHTML ="Usted no ingreso ningún texto"
-        alertas.appendChild(p);
-        alertas.classList.remove('ocultar')
+        // alertas.appendChild(p);
+        alertas.classList.add('alert')
         setTimeout(()=>{
             alertas.innerHTML = ""
-            alertas.classList.add('ocultar')
+            alertas.classList.remove('alert')
         },1000)
     }
 });
@@ -52,15 +56,15 @@ desencriptar.addEventListener('click', ()=>{
 copiaTexto.addEventListener('click',()=>{
     navigator.clipboard.writeText(textoResultado.value);
 
-    let p = document.createElement('p')
+
     p.innerHTML ="Usted a copiado el texto con exito"
     alertas.style.background="#0a6adf"
-    alertas.appendChild(p);
-    alertas.classList.remove('ocultar')
+    // alertas.appendChild(p);
+    alertas.classList.add('alert')
     setTimeout(()=>{
         alertas.style.background="#36da36a4"
         alertas.innerHTML = ""
-        alertas.classList.add('ocultar');
+        alertas.classList.remove('alert');
     },1000)
 })
 
