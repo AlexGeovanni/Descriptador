@@ -126,9 +126,10 @@ main{
     display: none;
 }
 .mensaje{
-    width: 350px;
-    right: 20%;
-    right:calc(80% - 350px);
+    width: 90%;
+    left: 5%;
+    right: 5%;
+
 }
 .mensaje > p{
     font-size:  1.2rem;
@@ -150,7 +151,9 @@ main{
         display: none;
     }
     .mensaje {
-        right:calc(70% - 400px);
+        width: 40%;
+        left:30%;
+        right:30%;
     }
 }
 

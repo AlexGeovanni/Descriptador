@@ -19,7 +19,8 @@ encriptar.addEventListener('click', ()=>{
         view()
         textoResultado.value = frase
         textoIngresado.value = ""
-    }else{
+    }
+    else{
         p.innerHTML = ""
         p.innerHTML ="Usted no ingreso ningún texto"
         // alertas.appendChild(p);
@@ -41,12 +42,12 @@ desencriptar.addEventListener('click', ()=>{
         textoIngresado.value = ""
     }
     else{
-        alertas.innerHTML = "";
+        p.innerHTML = "";
         p.innerHTML ="Usted no ingreso ningún texto"
         // alertas.appendChild(p);
         alertas.classList.add('alert')
         setTimeout(()=>{
-            alertas.innerHTML = ""
+            p.innerHTML = ""
             alertas.classList.remove('alert')
         },1000)
     }
@@ -63,7 +64,7 @@ copiaTexto.addEventListener('click',()=>{
     alertas.classList.add('alert')
     setTimeout(()=>{
         alertas.style.background="#36da36a4"
-        alertas.innerHTML = ""
+        p.innerHTML = ""
         alertas.classList.remove('alert');
     },1000)
 })
