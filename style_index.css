@@ -5,16 +5,18 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-main{
+html{
     background-color: #F3F5FC;
-    padding: 10px 0;
+}
+
+main{
     height: 100vh;
+    margin-bottom: 20px;
 }
 .contenedor{
-    position: relative;
     width: 90%;
     margin: 0 auto;
-    height: 100vh;
+    height: 100%;
 }
 .contenedor  h1{
     font-size: 4rem;
@@ -66,7 +68,7 @@ main{
 .contenedor .conte_vacio,
 .contenedor .conte_resultado{
     background-color: #ffffff;
-    margin: 0 0 15px;
+    margin: 10px 0 15px;
     padding: 50px;
     text-align: center;
     border-radius: 18px;
@@ -94,9 +96,9 @@ main{
 .mensaje{
     background-color:#C70039; 
     position: fixed;
-    width: 400px;
+    width: 350px;
     top: 38%;
-    right:calc(60% - 400px);
+    right:calc(60% - 350px);
     border-radius: 18px;
     padding: 25px;
     box-shadow: 1px 3px 8px 1px #00000059 ;
@@ -105,7 +107,7 @@ main{
 }
 .mensaje p{
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     text-align: center;
     font-weight: bold;
 }
@@ -113,11 +115,41 @@ main{
     transform: translateY(0);
     transition: opacity .2s ease-in-out;
 }
+footer{
+    padding: 25px;
+    width: 100%;
+    margin: auto;
+    font-size:1rem;  
+}
+footer div{
+    display: inline-block;
+    max-width: 800px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
 
+footer div p{
+    text-align: center;
+    font-weight: bold;
+}
+footer img{
+    width: 25px;
+}
+footer img:hover{
+    transform: scale(1.1);
+    transition: transform .3s ease-in-out;
+}
 
 /* adaptado a mobil */
 
 @media screen and (max-width:699px) {
+    main{
+        height: 100%;
+    }
     .conte_texto .bottones input,
 .conte_resultado input#copiar{
     padding: 25px 0;
@@ -135,6 +167,8 @@ main{
     font-size:  1.2rem;
 }
 
+
+
 }
 
 
@@ -142,7 +176,9 @@ main{
 /* adaptado a ipad */
 
 @media (min-width:700px) and (max-width:1200px) {
-
+    main{
+        height: 100%;
+    }
     .bottones div{
         display: flex;
         gap: 25px;
@@ -208,5 +244,8 @@ main{
         width:700px;
         margin: 0 auto;
     }
-    
+    .mensaje{
+        width: 420px;
+        right:calc(60% - 420px);
+    }
 }
