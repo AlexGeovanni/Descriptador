@@ -23,7 +23,6 @@ encriptar.addEventListener('click', ()=>{
     else{
         p.innerHTML = ""
         p.innerHTML ="Usted no ingreso ningún texto"
-        // alertas.appendChild(p);
         alertas.style.background="#C70039"
         alertas.classList.add('alert')
         setTimeout(()=>{
@@ -44,7 +43,7 @@ desencriptar.addEventListener('click', ()=>{
     else{
         p.innerHTML = "";
         p.innerHTML ="Usted no ingreso ningún texto"
-        // alertas.appendChild(p);
+        alertas.style.background="#C70039"
         alertas.classList.add('alert')
         setTimeout(()=>{
             p.innerHTML = ""
@@ -78,6 +77,7 @@ function view(){
 
 function encripta (e){
     let textActual = textoIngresado.value;
+    textActual = textActual.toLowerCase();
     let resultado = " ";
     if(e ==='Encriptar'){
     // for encripta las palabras

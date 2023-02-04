@@ -44,6 +44,14 @@ main{
     font-size: 1rem;
     margin: 10px 0;
 }
+
+
+
+
+input:hover{
+    font-weight: bold;
+}
+
 .conte_texto .bottones input,
 .conte_resultado input#copiar{
     display: block;
@@ -86,6 +94,10 @@ main{
     width: 80%;
     margin: 0 auto;
     margin-top: 20px;
+}
+.conte_vacio div img{
+    min-width: 80px;
+    max-width: 450px;
 }
 
 .ocultar{
@@ -220,7 +232,7 @@ footer img:hover{
     .conte_vacio img{
         display: block;
         margin-bottom: 55px;
-        width: 400px;
+        width: 100%;
     }
     .contenedor .conte_resultado textarea{
         height: 500px;
